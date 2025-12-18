@@ -1,163 +1,173 @@
-body{  /*home*/
-background-image: url(eindachtergrond.png);
-background-size: cover;
-}
-.overcandy{ /*candy*/
-background-image: url(eindachtergrond.png);
-background-size: cover;
-}
-
-.locaties{ /*locatie*/
-background-image: url(eindachtergrond.png);
-background-size: cover;
-}
-header{ /*home*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-basis: auto;
-}
-
-.tekst{ /*home*/
-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-font-family: "Shrikhand";
-text-align: center;
-}
-
-nav{ /*home*/
-    margin-top:50%;
-    width:100%;
-}
-
-nav a{ /*home*/
-    text-decoration: none;
-    color:white;
+/* ----------------------------------
+   ALGEMENE INSTELLINGEN
+---------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("eindachtergrond.png");
+    background-size: cover;
+    background-position: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-nav a:hover{ /*home*/
-    color: rgb(239, 0, 171);
-    transition: all 0.3s ease;
-}
-
-nav ul{ /*home*/
-    
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    list-style-type: none;
-    flex-basis: auto;
-    padding-left: 0;
-}
-
-.kaartje{ /*candy*/
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-h1{ /**/
-    color: white;
-    justify-content: center;
-    font-family: "Shrikhand";
-    color: white;
+header {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    padding: 20px 0;
 }
-h2{
+
+header img {
+    max-width: 180px;
+}
+
+
+/* ----------------------------------
+   TYPOGRAFIE
+---------------------------------- */
+h1, h2 {
+    font-family: "Shrikhand", cursive;
     color: white;
-    justify-content: center;
-    font-family: "Shrikhand";
-    color: white;
-    display: flex;
-    align-items: center;
-    font-family: "Shrikhand";
     text-align: center;
 }
 
-p{
+p {
     color: white;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: rgb(159, 18, 195);
-    padding: 5px;
-    border:solid 1px;
-    border-color: white;
-    border-radius: 5px;
+    background-color: rgba(159, 18, 195, 0.9);
+    padding: 8px;
+    border: solid 1px white;
+    border-radius: 6px;
+    font-size: 0.9rem;
 }
 
-.kaartje{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-}
 
-.kaartje p{
+/* ----------------------------------
+   NAVIGATIE
+---------------------------------- */
+footer nav {
     width: 100%;
-    font-size: x-small;
-    padding-left: 15px;
-}
-.kaart{
-    display: flex;
-    justify-content: baseline;
-    align-items: center; 
-    flex-direction: row-reverse; 
-}
-
-.kaart p{
-    width: 100%;
-    font-size: x-small;  
-}
-
-.plaats{
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 40px;
 }
 
-.plaats p{
-    font-size: x-small;
-    text-align: center;
-    width: 100%;
-
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
 }
 
-.loca p{
+nav li img {
+    width: 60px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:hover img {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+
+/* ----------------------------------
+   HOME-PAGINA
+---------------------------------- */
+.home .intro {
     display: flex;
     justify-content: center;
-    align-items: center;
-   
-}
-.loca{
-    margin-right: 10px;
+    margin-top: 40px;
 }
 
 
-.article{
+/* ----------------------------------
+   OVER CANDY
+---------------------------------- */
+
+.kaartje,
+.kaart {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 20px;
 }
 
-.openicoon{
+.kaartje img,
+.kaart img {
+    width: 40%;
+    border-radius: 8px;
+}
+
+.kaartje p,
+.kaart p {
+    width: 60%;
+}
+
+
+/* ----------------------------------
+   LOCATIES
+---------------------------------- */
+
+.locatie article,
+.openingstijden article {
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    justify-content: center;
-    margin-top: 85px;
-}
-
-.openicoon,img{
-    width: 100px; 
-   
-}
-
-
-.plaats{
     align-items: center;
+    margin: 15px auto;
+    width: 90%;
 }
 
+.locatie img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.openingstijden img {
+    width: 100px;
+}
+
+.openingstijden ul {
+    background: rgba(159, 18, 195, 0.9);
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid white;
+}
+
+.openingstijden li {
+    color: white;
+    margin: 3px 0;
+    list-style: none;
+}
+
+
+/* ----------------------------------
+   RESPONSIVE (MOBIEL)
+---------------------------------- */
+@media (max-width: 600px) {
+
+    .kaartje,
+    .kaart {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .kaartje img,
+    .kaart img {
+        width: 80%;
+    }
+
+    .kaartje p,
+    .kaart p {
+        width: 90%;
+    }
+
+    nav li img {
+        width: 50px;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+}
